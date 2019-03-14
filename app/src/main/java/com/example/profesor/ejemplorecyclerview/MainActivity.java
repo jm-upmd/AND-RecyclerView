@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
                 } catch (NumberFormatException e){
                     posicion = 0;
                 }
-                if(posicion < listaLibros.size() || posicion < 0) {
+                if(posicion < listaLibros.size() && posicion >= 0) {
                     listaLibros.remove(posicion);
                     recyclerView.scrollToPosition(posicion);
                     mAdapter.notifyItemRemoved(posicion);
